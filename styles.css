@@ -5,9 +5,6 @@ body {
     font-family: 'Fira Code';
     background-color: var(--mocha-base);
     color: var(--mocha-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
@@ -16,10 +13,59 @@ main {
     font-weight: 300;
 }
 
-.card {
+.site-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    color: var(--mocha-pink);
+    padding-top: 5rem;
+}
+.title {
+    margin-bottom: 0.1;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 8rem;
+    letter-spacing: 0.01rem;
+    animation: typing 1.6s steps(13, end) forwards;
+    width: 0; 
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    display: inline-block; 
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    letter-spacing: 0.01rem;
+    animation: typing 1.6s steps(13, end) forwards 1.5s;
+    width: 0;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 13ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--mocha-subtext0); }
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.aboutme-card {
     background: var(--mocha-crust);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     width: 35rem;
     height: 52rem;
     text-align: center;
@@ -30,7 +76,7 @@ main {
     outline-color: var(--mocha-blue);
 }
 
-.card:hover {
+.aboutme-card:hover {
     box-shadow: 0 0 36px var(--mocha-blue);
     transform: scale(1.1);
 
@@ -71,18 +117,17 @@ main {
 }
 
 .pronoun-box {
-    height: 1.5rem; /* Adjust height to be slightly smaller than name-box */
+    height: 1.5rem;
     width: 6rem;
     background: var(--mocha-base);
     border-radius: 0.4rem;
-    padding: 0.25rem 0.5rem; /* Reduce vertical padding */
-    font-size: 0.9rem; /* Slightly reduce font size */
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.9rem; 
     color: var(--washed-sapphire);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: color 0.7s ease;
-
 }
 
 .card-ascii-art {
@@ -97,7 +142,7 @@ main {
 .doomguy {
     color: var(--washed-mauve);
     font-size: small;
-    padding: 12px;
+    padding: 1rem;
     transition: color 0.7s ease;
 }
 
@@ -106,6 +151,9 @@ main {
     margin-left: 15%;
     text-align: left;
     color: var(--mocha-pink);
+    white-space: pre;
+    display: block;
+    line-height: 1;
 }
 
 .skills {
