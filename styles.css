@@ -33,7 +33,9 @@ main {
     align-items: center;
     text-align: center; 
     color: var(--mocha-pink);
-    padding-top: 5rem;
+    padding-top: 5vh;
+    transition: filter 0.5s ease;
+
 }
 .title {
     margin-bottom: 0.1;
@@ -62,28 +64,27 @@ main {
     to { width: 13ch; }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--mocha-subtext0); }
-}
-
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 3vh;
 }
 
 .aboutme-card,
 .skills-card {
+    z-index: 10;
     background: var(--mocha-crust);
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 35rem;
-    height: 52rem;
+    border-radius: 15px;
+    padding: 17px;
+    width: 35vh;
+    height: 50vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.7s ease, transform 0.8s ease;
+    transition: 
+        box-shadow 0.7s ease, 
+        transform 0.8s ease, 
+        filter 0.5s ease;
     outline: solid;
     outline-width: 5px;
     outline-color: var(--mocha-blue);
@@ -91,20 +92,18 @@ main {
 
 .skills-card:hover,
 .aboutme-card:hover {
-    box-shadow: 0 0 36px var(--mocha-blue);
+    box-shadow: 0 0 40px var(--mocha-blue);
     transform: scale(1.1);
+}
 
-    .pronoun-box {
-        color: var(--mocha-sapphire);
-    }
+.skills-card:hover .title-box,
+.aboutme-card:hover .title-box {
+    color: var(--mocha-sapphire);
+}
 
-    .title-box {
-        color: var(--mocha-sapphire)
-    }
-
-    .doomguy {
-        color: var(--mocha-mauve);
-    }
+.skills-card:hover .doomguy,
+.aboutme-card:hover .doomguy {
+    color: var(--mocha-mauve);
 }
 
 .skills-title-box,
@@ -112,8 +111,9 @@ main {
     height: 2rem;
     width: 8rem;
     background: var(--mocha-base);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    padding: 8px;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--washed-sapphire);
@@ -128,15 +128,16 @@ main {
     width: 100%;
     height: 18rem;
     background: var(--mocha-base);
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    margin-top: 0;
     text-align: center;
 }
 
 .doomguy {
     color: var(--washed-mauve);
     font-size: small;
-    padding: 1rem;
+    padding: 17px;
     transition: color 0.7s ease;
 }
 
@@ -144,6 +145,6 @@ main {
     text-align: center;
     font-size: 1.1rem;
     align-items: left;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
 }

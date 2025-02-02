@@ -9,3 +9,36 @@ fetch('./assets/doomguy.txt')
     }
   })
   .catch(error => console.error('Error loading the file:', error));
+  
+const aboutMeCard = document.querySelector('.aboutme-card');
+const skillsCard = document.querySelector('.skills-card');
+const siteHeader = document.querySelector('.site-header');
+const body = document.querySelector('body');
+const allOtherElements = document.querySelectorAll('main, .site-header, .cards-container');
+
+function aboutmeApplyBackgroundBlur() {
+  aboutMeCard.style.filter = 'brightness(120%)';
+  skillsCard.style.filter = 'blur(10px) brightness(80%)';
+  siteHeader.style.filter = 'blur(10px) brightness(80%)';
+}
+
+function skillsApplyBackgroundBlur() {
+  skillsCard.style.filter = 'brightness(120%)';
+  aboutMeCard.style.filter = 'blur(10px) brightness(80%)';
+  siteHeader.style.filter = 'blur(10px) brightness(80%)';
+}
+
+function removeBackgroundBlur() {
+  aboutMeCard.style.filter = 'none';
+  siteHeader.style.filter = 'none';
+  skillsCard.style.filter = 'none';
+  allOtherElements.forEach(element => {
+    element.style.filter = 'none';
+  });
+}
+
+aboutMeCard.addEventListener('mouseenter', aboutmeApplyBackgroundBlur);
+aboutMeCard.addEventListener('mouseleave', removeBackgroundBlur);
+
+skillsCard.addEventListener('mouseenter', skillsApplyBackgroundBlur);
+skillsCard.addEventListener('mouseleave', removeBackgroundBlur);
