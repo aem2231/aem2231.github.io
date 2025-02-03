@@ -66,50 +66,56 @@ main {
 
 .cards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    row-gap: 5px;
     margin-top: 3rem;
 }
 
 .aboutme-card,
-.skills-card {
-    z-index: 10;
+.skills-card,
+.projects-card {
     background: var(--mocha-crust);
     border-radius: 1rem;
     padding: 1.2rem;
-    width: 35rem;
-    height: 50rem;
+    width: 28vh;
+    height: 40vh;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 
         box-shadow 0.7s ease, 
         transform 0.8s ease, 
-        filter 0.5s ease;
+        filter 0.5s ease,
+        top 0.8s ease,
+        left 0.8s ease;
     outline: solid;
     outline-width: 5px;
     outline-color: var(--mocha-blue);
 }
 
 .skills-card:hover,
-.aboutme-card:hover {
+.aboutme-card:hover,
+.projects-card:hover {
     box-shadow: 0 0 40px var(--mocha-blue);
     transform: scale(1.1);
 }
 
 .skills-card:hover .title-box,
-.aboutme-card:hover .title-box {
+.aboutme-card:hover .title-box,
+.projects-card:hover.title-box {
     color: var(--mocha-sapphire);
 }
 
-.skills-card:hover .doomguy,
-.aboutme-card:hover .doomguy {
-    color: var(--mocha-mauve);
+.skills-card:hover .cacodemon,
+.aboutme-card:hover .doomguy,
+.projects-card:hover .slayer-mark {
+    color: var(--mocha-red);
 }
 
 .skills-title-box,
-.aboutme-title-box {
-    height: 2rem;
-    width: 8rem;
+.aboutme-title-box,
+.projects-title-box {
+    height: 5%;
+    width: 30%;
     background: var(--mocha-base);
     border-radius: 0.5rem;
     margin-bottom: 1vh;
@@ -124,26 +130,47 @@ main {
 }
 
 .skills-card-ascii-art,
-.aboutme-card-ascii-art {
+.aboutme-card-ascii-art,
+.projects-card-ascii-art {
     width: 100%;
-    height: 18rem;
-    background: var(--mocha-base);
+    height: 35%;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     margin-top: 0;
 }
 
 .doomguy {
-    color: var(--washed-mauve);
-    font-size: 8.5px;
-    padding: 30px;
-    margin-left: -10px;
+    color: var(--washed-red);
+    font-size: 43%;
+    align-self: center;
+    padding-top: 0.5rem;
+    padding-left: 0.7rem;
     transition: color 0.7s ease;
 }
 
-.about-me {
+.cacodemon {
+    color: var(--washed-red);
+    font-size: 30%;
+    align-self: center;
+    padding-top: 0.5rem;
+    padding-left: 6.5rem;
+    transition: color 0.7s ease;
+}
+
+.slayer-mark {
+    color: var(--washed-red);
+    font-size: 47%;
+    align-self: center;
+    padding-top: 0.1rem;
+    padding-left: 8.5rem;
+    transition: color 0.7s ease;
+}
+
+.about-me,
+.skills,
+.projects {
     text-align: center;
-    font-size: 1.1rem;
+    font-size:85%;
     align-items: left;
     padding-left: 0.5;
     padding-right: 0.5rem;
