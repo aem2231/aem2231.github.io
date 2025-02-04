@@ -15,18 +15,10 @@ h2 {
 
 body {
     font-family: 'Fira Code';
-    background-color: var(--mocha-base);
+    background-color: var(--mocha-crust);
     color: var(--mocha-text);
     height: 100vh;
     margin: 0;
-}
-
-.theme-switch {
-    margin: 10px;
-    position: fixed;
-    background: var(--mocha-crust);
-
-    z-index: 1000;
 }
 
 main {
@@ -77,11 +69,32 @@ main {
 }
 
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
     width: 80vw;
     height: 80vh;
-    background-color: var(--mocha-crust);
     position: absolute;
     left: 50%; 
     transform: translate(-50%);
 }
+
+.about-me,
+ .skills,
+ .projects,
+ .tech-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 20%;
+    border-radius: 10px;
+    margin: 1rem 0;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--mocha-base);
+}
+
 
