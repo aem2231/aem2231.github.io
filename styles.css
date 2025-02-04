@@ -44,7 +44,7 @@ main {
     white-space: nowrap;
     font-size: 8rem;
     letter-spacing: 0.01rem;
-    animation: typing 1.2s steps(13, end) forwards 0.2s;
+    animation: typing 1.2s steps(13, end) forwards;
     width: 0; 
 }
 
