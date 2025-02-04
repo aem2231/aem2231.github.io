@@ -162,8 +162,8 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 16%;
-    height: 130%; 
+    width: 30%;
+    height: 100%; 
     background-color: var(--mocha-base);
     border: 0.5px solid var(--mocha-surface0);
     border-radius: 8px;
