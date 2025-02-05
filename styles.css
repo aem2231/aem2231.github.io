@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import url("colors.css");
 
-h1 {
-    font-size: 3vw;
-    font-weight: 300;  
-    margin: 0.5rem 0; 
+h1, h2 {
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    font-weight: 300; 
 }
 
-h2 {
-    font-size: 2.5vw;
-    font-weight: 300;
-    margin: 0.5rem 0;
+p {
+    line-height: 1.5;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
 
 body {
@@ -39,11 +37,29 @@ a:visited {
     color: var(--mocha-lavender);
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+}
+
+ul li {
+    padding: 8px 0;
+}
+
+ul li:first-child {
+    padding-top: 0;
+}
+
+ul li:last-child {
+    padding-bottom: 0;
+}
+
 .top-bar {
     position: fixed;
     background-color: var(--mocha-mantle);
     margin-top: 10px;
-    height: 3%;
+    height: clamp(40px, 4vh, 60px);
     width: 95%;
     max-width: 3000px;
     border-radius: 10px;
@@ -107,7 +123,9 @@ a:visited {
     flex-direction: column; 
     gap: 1rem;
     width: 80vw;
-    height: 80vh;
+    max-width: 1600px;
+    min-height: 80vh;
+    height: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -120,7 +138,7 @@ a:visited {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 100%;
     width: 90%;
 }
@@ -129,10 +147,12 @@ a:visited {
     background-color: var(--mocha-crust);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-self: start;
+    gap: 0.1rem;
     height: 80%;
     width: 50%;
     text-align: left;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
 .tech-stack-skills-container {
@@ -147,23 +167,24 @@ a:visited {
 
 .tech-stack {
     background-color: var(--mocha-mantle);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-row-gap: 0.8rem;
+    grid-column-gap: 0.8rem;
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
 }
+
+
 
 .tech-stack-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 16%;
-    height: 130%; 
+    width: 85%;
+    aspect-ratio: 1/1;
     background-color: var(--mocha-base);
     border: 0.5px solid var(--mocha-surface0);
     border-radius: 8px;
@@ -193,7 +214,7 @@ a:visited {
 .skills {
     background-color: var(--mocha-mantle);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
     height: 50%;
     width: 100%;
@@ -202,10 +223,39 @@ a:visited {
 .projects-container {
     background-color: var(--mocha-base);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
     gap: 1rem;
     height: 35%;
     width: 80%; 
+}
+
+.project-button {
+    background-color: var(--mocha-base);
+    color: var(--mocha-text);
+    width: 22%;
+    aspect-ratio: 1/1.2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    border: 0.5px solid var(--mocha-surface0);
+    transition: transform 1s ease, border 1s ease, background-color 1s ease, outline 1s ease;
+}
+
+.project-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-button:hover {
+    transform: scale(1.1);
+    background-color: var(--mocha-surface0);
+    outline: 2px solid var(--mocha-mauve);
 }
 
 .title-about-me,
@@ -213,7 +263,25 @@ a:visited {
 .title-projects,
 .title-tech-stack {
     text-decoration: underline;
-    font-size: clamp(1rem, 1.2vw, 2rem);
+    font-size: clamp(1rem, 1.5vw, 2.5rem);
     font-weight: 400;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .subcontainer {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .about-me-container, 
+    .tech-stack-skills-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-button {
+        width: 45%;
+        aspect-ratio: 1/1;
+    }
 }
