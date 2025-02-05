@@ -233,7 +233,6 @@ ul li:last-child {
 
 .project-button {
     background-color: var(--mocha-base);
-    color: var(--mocha-text);
     width: 22%;
     aspect-ratio: 1/1.2;
     padding: 10px 20px;
@@ -256,6 +255,12 @@ ul li:last-child {
     transform: scale(1.1);
     background-color: var(--mocha-surface0);
     outline: 2px solid var(--mocha-mauve);
+}
+
+#skills-list,
+#about-me {
+    color: var(--mocha-subtext0);
+    font-size: clamp(0.8rem, 0.8vw, 1.2rem);
 }
 
 .title-about-me,
