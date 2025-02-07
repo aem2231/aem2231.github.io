@@ -179,7 +179,7 @@ ul li:last-child {
     font-size: 8vw;
     letter-spacing: 0.01rem;
     animation: 
-        typing 1.6s steps(13, end) forwards,
+        typing 2s steps(13, end) forwards,
         blink-caret .75s step-end infinite;
     width: 0;
 }
@@ -187,10 +187,9 @@ ul li:last-child {
 .subtitle {
     font-size: 2vw;
     animation: 
-        typing 1.6s steps(13, end) forwards 2s,
+        typing 2s steps(13, end) forwards 2s,
         blink-caret .75s step-end infinite;
 }
-
 
 @keyframes typing {
     from { width: 0; }
