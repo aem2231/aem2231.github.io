@@ -75,6 +75,20 @@ a:hover,
     max-width: 40ch;
 }
 
+#smallfetch-popup {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 #popup-top-bar {
     display: flex;
     flex-direction: row;
@@ -124,7 +138,7 @@ a:hover,
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-    min-width: 250px;
+    max-width: 3000px;
     position: relative;
 }
 
@@ -371,7 +385,7 @@ ul li:last-child {
     margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 786px) {
     .subcontainer {
         flex-direction: column;
         width: 95%;
@@ -386,5 +400,10 @@ ul li:last-child {
     .project-button {
         width: 40%;
         aspect-ratio: 1/1.2;
+    }
+
+    .smallfetch-popup {
+        width: 80%;
+        left: 10%;
     }
 }
