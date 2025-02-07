@@ -34,7 +34,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
-document.getElementById("smallfetch-title").onclick = function () {
+document.getElementById("smallfetch-gitrepo").onclick = function () {
   location.href = "https://github.com/aem2231/smallfetch";
 }
 
