@@ -30,9 +30,11 @@ a,
 }
 
 a:hover,
-#contact-button:hover {
+#contact-button:hover,
+.popup-title:hover {
     color: var(--mocha-sapphire);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #mailto-link {
@@ -43,12 +45,43 @@ a:hover,
     color: var(--mocha-lavender);
 }
 
-#contact-title {
+#smallfetch-container {
+    max-width: fit-content;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;    
+}
+
+#desc-techstack-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 5px;
+}
+
+#tech-stack-used {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-desc {
+    max-width: 40ch;
+}
+
+.popup-title {
     font-size: clamp(1.5rem, 2.5vw, 1.8rem);
     color: var(--mocha-sapphire);
 }
 
+.popup-subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    color: var(--mocha-sapphire);
+    margin-bottom: 10px;
+}
+
 .popup {
+    font-size: clamp(0.8rem, 1vw, 1.1rem);
     display: hidden;
     position: fixed;
     top: 0;
@@ -64,12 +97,13 @@ a:hover,
 
 .popup-content {
     display: hidden;
-    background: var(--mocha-base);
+    background: var(--mocha-mantle);
+    border: 0.5px solid var(--mocha-surface0);
+    border-radius: 8px;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
     min-width: 250px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -278,6 +312,10 @@ ul li:last-child {
 }
 
 .project-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--mocha-base);
     width: 10%;
     aspect-ratio: 1/1.2;
@@ -335,7 +373,7 @@ ul li:last-child {
     }
 
     .project-button {
-        width: 45%;
-        aspect-ratio: 1/1;
+        width: 40%;
+        aspect-ratio: 1/1.2;
     }
 }
