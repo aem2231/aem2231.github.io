@@ -75,6 +75,14 @@ a:hover,
     max-width: 40ch;
 }
 
+#popup-top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    row-gap: 5px;
+}
+
 .popup-title {
     font-size: clamp(1.5rem, 2.5vw, 1.8rem);
     color: var(--mocha-sapphire);
@@ -82,8 +90,9 @@ a:hover,
 
 .popup-gitrepo-link {
     font-size: clamp(0.8rem, 1vw, 1.1rem);
-    color: var(--mocha-sapphire);
+    color: var(--mocha-pink);
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .popup-subtitle {
@@ -121,7 +130,6 @@ a:hover,
 
 
 .close-btn {
-    position: absolute;
     top: 10px;
     left: 10px;
     cursor: pointer;
