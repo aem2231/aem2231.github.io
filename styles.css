@@ -11,6 +11,17 @@ p {
     font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
+h1::selection,
+h2::selection,
+p::selection,
+span::selection,
+li::selection,
+img::selection,
+a::selection {
+    background-color: var(--mocha-mauve);
+    color: var(--mocha-surface0);
+}
+
 body {
     font-family: 'Fira Code';
     background-color: var(--mocha-crust);
