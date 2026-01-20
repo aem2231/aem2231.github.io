@@ -1,153 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  </head>
+  <body>
     <div class="top-bar">
-        <div class="links">
-            <span id="contact-button">[contact me]</span>
-            <a href="https://github.com/aem2231">[github]</a>
-            <a href="https://leetcode.com/u/aem2231/">[leetcode]</a>
-        </div>
+      <div class="links">
+        <span id="contact-button">[contact me]</span>
+        <a href="https://github.com/aem2231">[github]</a>
+        <a href="https://leetcode.com/u/aem2231/">[leetcode]</a>
+      </div>
     </div>
     <div id="contact-popup" class="popup">
-        <div class="popup-content">
-            <span id="close-contact-popup" class="close-btn">[close]</span>
-            <h2 class="popup-title">Contact Me</h2>
-            <a id="mailto-link" class="contact-detail" href="mailto:eris.jetullaji@protonmail.com">[email] eris.jetullaji@protonmail.com<br></a>
-            <span class="contact-detail">[phone] 07743696701<br></span>
-        </div>
+      <div class="popup-content">
+        <span id="close-contact-popup" class="close-btn">[close]</span>
+        <h2 class="popup-title">Contact Me</h2>
+        <a
+          id="mailto-link"
+          class="contact-detail"
+          href="mailto:eris.jetullaji@protonmail.com"
+          >[email] eris.jetullaji@protonmail.com<br
+        /></a>
+      </div>
     </div>
 
     <div id="smallfetch-popup" class="popup">
-        <div class="popup-content">
-            <div id="popup-top-bar">
-                <span id="close-project-popup" class="close-btn">[close]</span>
-                <span id="smallfetch-gitrepo" class="popup-gitrepo-link">[git repo]</span>
-            </div>
-            <h2 id="smallfetch-title" class="popup-title">smallfetch</h2>
-            <div id="smallfetch-container">
-
-                <p class="project-desc">Smallfetch is a simple 'fetch' command for linux, similar to neofetch, that fetches system
-                        information and displays it in a viusally appealing way.
-                </p>
-
-                <div id="tech-stack-used">
-                    <span class="popup-subtitle">Technologies Used</span>
-                    <div class="tech-stack">
-                        <div class="tech-stack-item">
-                            <img src="./assets/c.png">
-                            <span class="tech-name">C</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/bash.png">
-                            <span class="tech-name">Bash</span>
-                        </div>
-
-                        <div class="tech-stack-item">
-                            <img src="./assets/linux.png">
-                            <span class="tech-name">Linux</span>
-                        </div>
-                     </div>
-                </div>
-
-
-            </div>
+      <div class="popup-content">
+        <div id="popup-top-bar">
+          <span id="close-project-popup" class="close-btn">[close]</span>
+          <span id="smallfetch-gitrepo" class="popup-gitrepo-link"
+            >[git repo]</span
+          >
         </div>
+        <h2 id="smallfetch-title" class="popup-title">smallfetch</h2>
+        <div id="smallfetch-container">
+          <p class="project-desc">
+            Smallfetch is a simple 'fetch' command for linux, similar to
+            neofetch, that fetches system information and displays it in a
+            viusally appealing way.
+          </p>
+
+          <div id="tech-stack-used">
+            <span class="popup-subtitle">Technologies Used</span>
+            <div class="tech-stack">
+              <div class="tech-stack-item">
+                <img src="./assets/c.png" />
+                <span class="tech-name">C</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/bash.png" />
+                <span class="tech-name">Bash</span>
+              </div>
+
+              <div class="tech-stack-item">
+                <img src="./assets/linux.png" />
+                <span class="tech-name">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="p2p-chat-popup" class="popup">
+      <div class="popup-content">
+        <div id="popup-top-bar">
+          <span id="close-project-popup" class="close-btn">[close]</span>
+          <span id="p2p-chat-gitrepo" class="popup-gitrepo-link"
+            >[git repo]</span
+          >
+        </div>
+        <h2 id="p2p-chat-title" class="popup-title">p2p-chat</h2>
+        <div id="p2p-chat-container">
+          <p class="project-desc">
+            Smallfetch is a simple 'fetch' command for linux, similar to
+            neofetch, that fetches system information and displays it in a
+            viusally appealing way.
+          </p>
+
+          <div id="tech-stack-used">
+            <span class="popup-subtitle">Technologies Used</span>
+            <div class="tech-stack">
+              <div class="tech-stack-item">
+                <img src="./assets/c.png" />
+                <span class="tech-name">C</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/bash.png" />
+                <span class="tech-name">Bash</span>
+              </div>
+
+              <div class="tech-stack-item">
+                <img src="./assets/linux.png" />
+                <span class="tech-name">Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <header class="site-header">
-        <h1 class="title">
-            Hi, I'm Eris.
-        </h1>
-        <h2 class="subtitle">
-            [scroll down]
-        </h2>
+      <h1 class="title">Hi, I'm Eris.</h1>
+      <h2 class="subtitle">[scroll down]</h2>
     </header>
     <main>
-        <div class="container">
-            <div class="subcontainer">
-
-                <div class="about-me-container">
-                    <span id="title-about-me">About Me</span>
-                    <div id="about-me">
-                        <p id="about-me-text">
-                            Hi, I'm Eris, a passionate programmer with a strong foundation in Python, C and Linux Systems.
-                            My programming journery began when I was 13 and started to learn Python throughout lockdown.
-                            Since then, I've become overwhelmingly enthusiastic about programming and Computer Science as a whole.
-                        </p>
-                        <p id="about-me-text">
-                            I take a strong interest in the lower-level side of computer science, such as CPU Architecture, Emulators and Kernels
-                            and ideally, I would like to work in a position that is heavily involved in these.
-                            I also have a strong interest in Linux and advocate for open-source software.
-                        </p>
-                        <p id="about-me-text">
-                            Currently, I'm learning the <a href="https://gbadev.net/tonc/">tonc library</a> so that I can make a game for the GameBoy Advance.
-                            Sooner or later, I'll add a devlogs section to this page and post, well, devlogs there and document any research related to projects I'm working on.
-                        </p>
-                        <p id="about-me-text">
-                            Apart from programming, I love to listen to music, skate and play Doom or THPS2 on my GameBoy Advance SP.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="tech-stack-skills-container">
-                    <span id="title-tech-stack">Tech Stack</span>
-                    <div class="tech-stack">
-                        <div class="tech-stack-item">
-                            <img src="./assets/python.png">
-                            <span class="tech-name">Python</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/c.png">
-                            <span class="tech-name">C/C++</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/git.png">
-                            <span class="tech-name">Git</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/bash.png">
-                            <span class="tech-name">bash</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/linux.png">
-                            <span class="tech-name">Linux</span>
-                        </div>
-                        <div class="tech-stack-item">
-                            <img src="./assets/nix.png">
-                            <span class="tech-name">Nix</span>
-                        </div>
-                    </div>
-
-                    <span id="title-skills">Skills</span>
-                    <div class="skills">
-                        <ul class="list"; style="list-style-type: none;"; id="skills-list">
-                            <li>-> Strong problem solving skills</li>
-                            <li>-> Competent communicator when working in groups</li>
-                            <li>-> Proficient in version control using Git</li>
-                            <li>-> Three years of experience with Linux and the command line</li>
-                            <li>-> Quick to learn and adapt to technologies that are new to me</li>
-                        </ul>
-                    </div>
-
-                </div>
+      <div class="container">
+        <div class="subcontainer">
+          <div class="about-me-container">
+            <span id="title-about-me">About Me</span>
+            <div id="about-me">
+              <p id="about-me-text">
+                I like programming anf mcr and shiabri :tada:
+              </p>
+              <p id="about-me-text"></p>
+              <p id="about-me-text"></p>
             </div>
-            <span id="title-projects">Projects</span>
-            <div class="projects-container">
-                <div class="project-button" id="smallfetch-button">
-                    <img src="./assets/linux.png">
-                    <span class="project-name">smallfetch</span>
-                </div>
+          </div>
+
+          <div class="tech-stack-skills-container">
+            <span id="title-tech-stack">Tech Stack</span>
+            <div class="tech-stack">
+              <div class="tech-stack-item">
+                <img src="./assets/python.png" />
+                <span class="tech-name">Python</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/c.png" />
+                <span class="tech-name">C/C++</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/git.png" />
+                <span class="tech-name">Git</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/bash.png" />
+                <span class="tech-name">bash</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/linux.png" />
+                <span class="tech-name">Linux</span>
+              </div>
+              <div class="tech-stack-item">
+                <img src="./assets/nix.png" />
+                <span class="tech-name">Nix</span>
+              </div>
             </div>
+
+            <span id="title-skills">Skills</span>
+            <div class="skills">
+              <ul
+                class="list"
+                ;
+                style="list-style-type: none"
+                ;
+                id="skills-list"
+              >
+                <li>-> Strong problem solving skills</li>
+                <li>-> Competent communicator when working in groups</li>
+                <li>-> Proficient in version control using Git</li>
+                <li>
+                  -> Three years of experience with Linux and the command line
+                </li>
+                <li>
+                  -> Quick to learn and adapt to technologies that are new to me
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <span id="title-projects">Projects</span>
+        <div class="projects-container">
+          <div class="project-button" id="smallfetch-button">
+            <img src="./assets/linux.png" />
+            <span class="project-name">smallfetch</span>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer"></footer>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
