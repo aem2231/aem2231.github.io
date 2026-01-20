@@ -55,7 +55,7 @@ if (p2pBtn && p2pPopupEl) {
 }
 
 // Close project popups
-const closeProjectEls = document.querySelectorAll("#close-project-popup");
+const closeProjectEls = document.querySelectorAll(".close-project-popup");
 if (closeProjectEls && closeProjectEls.length) {
   closeProjectEls.forEach(function (el) {
     el.addEventListener("click", function () {
